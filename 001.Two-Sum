@@ -1,3 +1,4 @@
+//1.Brute force      O(n^2)  35ms
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         int result[]=new int[2];
@@ -9,9 +10,32 @@ class Solution {
                 if(sum==target){
                     result[0]=i;
                     result[1]=j;
+                    break;
                 }
             }
         }
        return result;
+    }
+}
+
+//2.HashMap   O(n)    4ms
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int[] res=new int[2];
+        HashMap<Integer,Integer> map=new HashMap<>();
+        int len=nums.length;
+        int i,value;
+        for(i=0;i<len;i++){
+            value=nums[i];
+            if(map.containsKey(target-value)){
+                res[0]=map.get(target-value);
+                res[1]=i;
+                //return new int[] {map.get(target-value),i};
+                break;
+            }
+            map.put(value,i);
+        }
+        return res;
+        //
     }
 }
