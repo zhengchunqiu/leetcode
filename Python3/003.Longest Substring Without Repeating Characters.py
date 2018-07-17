@@ -1,21 +1,5 @@
-def lengthOfLongestSubstring(self,str):
-    start=0
-    max_len=0
-
-    for i in range(len(str)-1):
-        for j in range(i+1,len(str)):
-            pass
-
-str='abcdefg'
-#lengthOfLongestSubstring(str)
-
-print(str[0:1])
-for i in range(2):
-    print(i)
-
 if 'b' in 'ab':
     print('OK')
-
 
 def lengthOfLongestSubstring(s):
     """
