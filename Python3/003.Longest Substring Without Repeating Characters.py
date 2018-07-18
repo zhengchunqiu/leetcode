@@ -21,7 +21,7 @@ class Solution(object):
                     if max_len < length- i :
                         max_len = length-i
         return max_len
-#2.字典
+#2.字典  72ms  99.76%
 class Solution(object):
     def lengthOfLongestSubstring(self,s):
         """
